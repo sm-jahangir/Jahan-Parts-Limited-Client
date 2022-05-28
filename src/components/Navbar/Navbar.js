@@ -68,7 +68,7 @@ const Navbar = () => {
           </ul>
         </div>
         <a href="/" className="btn btn-ghost normal-case text-xl">
-          daisyUI
+          JahanGroup
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">

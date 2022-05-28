@@ -9,33 +9,37 @@ import SignUp from "./components/Auth/SignUp/SignUp";
 import Products from "./components/Dashboard/Products/Products";
 import RequireAuth from "./components/Auth/RequireAuth";
 import MyReview from "./components/Dashboard/MyReview/MyReview";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route
-          path="dashboard"
-          element={
-            <RequireAuth>
-              <Products />
-            </RequireAuth>
-          }
-        />
-        <Route
-          path="my-review"
-          element={
-            <RequireAuth>
-              <MyReview />
-            </RequireAuth>
-          }
-        />
-      </Routes>
+      <div style={{ width: "90%", margin: "0 auto" }}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route
+            path="dashboard"
+            element={
+              <RequireAuth>
+                <Products />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="my-review"
+            element={
+              <RequireAuth>
+                <MyReview />
+              </RequireAuth>
+            }
+          />
+        </Routes>
+      </div>
+      <Footer />
       <ToastContainer />
     </div>
   );
