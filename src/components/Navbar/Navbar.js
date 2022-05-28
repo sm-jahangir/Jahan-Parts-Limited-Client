@@ -102,7 +102,7 @@ const Navbar = () => {
             </ul>
           </li>
           <li>
-            <a href="/">Item 3</a>
+            <Link to="/dashboard">Products</Link>
           </li>
         </ul>
       </div>
