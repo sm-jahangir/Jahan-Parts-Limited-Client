@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
+import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -37,6 +38,7 @@ function App() {
           }
         />
       </Routes>
+      <div className="extra__gap"></div>
       <Footer />
       <ToastContainer />
     </div>
