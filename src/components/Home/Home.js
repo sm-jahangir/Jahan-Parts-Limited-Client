@@ -1,5 +1,7 @@
 import React from "react";
+import LatestBlog from "../Blog/LatestBlog";
 import Products from "../Products/Products";
+import Review from "../Review/Review";
 import "./Home.css";
 import HomeSlider from "./HomeSlider";
 
@@ -366,6 +368,8 @@ const Home = () => {
           </div>
         </div>
         {/* Our Experts Team End */}
+        <Review />
+        <LatestBlog />
       </div>
     </div>
   );
