@@ -12,12 +12,14 @@ import RequireAuth from "./components/Auth/RequireAuth";
 import MyReview from "./components/Dashboard/MyReview/MyReview";
 import Footer from "./components/Footer/Footer";
 import Blog from "./components/Blog/Blog";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Routes>
+        <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
