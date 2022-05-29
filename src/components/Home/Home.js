@@ -248,8 +248,9 @@ const Home = () => {
                 <div className="px-6">
                   <img
                     alt="John Doe"
-                    src="https://dummyimage.com/300"
-                    className="rounded-xl shadow-lg max-w-full h-auto align-middle border-none undefined"
+                    src="team/person-1.jpg"
+                    className="rounded-xl shadow-lg max-w-full h-auto align-middle border-none undefined  mx-auto"
+                    style={{ cursor: "auto", width: "500px", height: "250px" }}
                   />
                   <div className="pt-6 text-center">
                     <h1 className="text-gray-900 text-xl font-serif font-bold leading-normal mt-0 mb-2">
@@ -279,9 +280,9 @@ const Home = () => {
                 <div className="px-6" style={{ cursor: "auto" }}>
                   <img
                     alt="Jack Wales"
-                    src="https://dummyimage.com/300"
-                    className="rounded-xl shadow-lg max-w-full h-auto align-middle border-none undefined"
-                    style={{ cursor: "auto" }}
+                    src="team/person-5.jpg"
+                    className="rounded-xl shadow-lg max-w-full h-auto align-middle border-none undefined mx-auto"
+                    style={{ cursor: "auto", width: "500px", height: "250px" }}
                   />
                   <div className="pt-6 text-center">
                     <h1 className="text-gray-900 text-xl font-serif font-bold leading-normal mt-0 mb-2">
@@ -311,9 +312,9 @@ const Home = () => {
                 <div className="px-6" style={{ cursor: "auto" }}>
                   <img
                     alt="George Hoyt"
-                    src="https://dummyimage.com/300"
-                    className="rounded-xl shadow-lg max-w-full h-auto align-middle border-none undefined"
-                    style={{ cursor: "auto" }}
+                    src="team/person-3.jpg"
+                    className="rounded-xl shadow-lg max-w-full h-auto align-middle border-none undefined  mx-auto"
+                    style={{ cursor: "auto", width: "500px", height: "250px" }}
                   />
                   <div className="pt-6 text-center">
                     <h1 className="text-gray-900 text-xl font-serif font-bold leading-normal mt-0 mb-2">
@@ -340,8 +341,9 @@ const Home = () => {
                 <div className="px-6">
                   <img
                     alt="Jenna Kardi"
-                    src="https://dummyimage.com/300"
-                    className="rounded-xl shadow-lg max-w-full h-auto align-middle border-none undefined"
+                    src="team/person-4.jpg"
+                    className="rounded-xl shadow-lg max-w-full h-auto align-middle border-none undefined  mx-auto"
+                    style={{ cursor: "auto", width: "500px", height: "250px" }}
                   />
                   <div className="pt-6 text-center">
                     <h1 className="text-gray-900 text-xl font-serif font-bold leading-normal mt-0 mb-2">

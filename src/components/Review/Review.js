@@ -63,7 +63,7 @@ const Review = () => {
               <a className="inline-flex items-center" href="/">
                 <img
                   alt="testimonial"
-                  src="https://dummyimage.com/107x107"
+                  src="https://user-images.githubusercontent.com/54521023/152726300-b03e134b-ff5c-40bf-a982-e01d825b4b68.png"
                   className="h-12 w-12 flex-shrink-0 rounded-full object-cover object-center"
                 />
                 <span className="flex flex-grow flex-col pl-2">
@@ -98,7 +98,7 @@ const Review = () => {
               <a className="inline-flex items-center" href="/">
                 <img
                   alt="testimonial"
-                  src="https://dummyimage.com/107x107"
+                  src="https://user-images.githubusercontent.com/54521023/152726300-b03e134b-ff5c-40bf-a982-e01d825b4b68.png"
                   className="h-12 w-12 flex-shrink-0 rounded-full object-cover object-center"
                 />
                 <span className="flex flex-grow flex-col pl-2">
@@ -133,7 +133,7 @@ const Review = () => {
               <a className="inline-flex items-center" href="/">
                 <img
                   alt="testimonial"
-                  src="https://dummyimage.com/107x107"
+                  src="https://user-images.githubusercontent.com/54521023/152726300-b03e134b-ff5c-40bf-a982-e01d825b4b68.png"
                   className="h-12 w-12 flex-shrink-0 rounded-full object-cover object-center"
                 />
                 <span className="flex flex-grow flex-col pl-2">
@@ -168,7 +168,7 @@ const Review = () => {
               <a className="inline-flex items-center" href="/">
                 <img
                   alt="testimonial"
-                  src="https://dummyimage.com/107x107"
+                  src="https://user-images.githubusercontent.com/54521023/152726300-b03e134b-ff5c-40bf-a982-e01d825b4b68.png"
                   className="h-12 w-12 flex-shrink-0 rounded-full object-cover object-center"
                 />
                 <span className="flex flex-grow flex-col pl-2">
@@ -203,7 +203,7 @@ const Review = () => {
               <a className="inline-flex items-center" href="/">
                 <img
                   alt="testimonial"
-                  src="https://dummyimage.com/107x107"
+                  src="https://user-images.githubusercontent.com/54521023/152726300-b03e134b-ff5c-40bf-a982-e01d825b4b68.png"
                   className="h-12 w-12 flex-shrink-0 rounded-full object-cover object-center"
                 />
                 <span className="flex flex-grow flex-col pl-2">
@@ -237,7 +237,7 @@ const Review = () => {
               <a className="inline-flex items-center" href="/">
                 <img
                   alt="testimonial"
-                  src="https://dummyimage.com/107x107"
+                  src="https://user-images.githubusercontent.com/54521023/152726300-b03e134b-ff5c-40bf-a982-e01d825b4b68.png"
                   className="h-12 w-12 flex-shrink-0 rounded-full object-cover object-center"
                 />
                 <span className="flex flex-grow flex-col pl-2">

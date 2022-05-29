@@ -13,6 +13,9 @@ import MyReview from "./components/Dashboard/MyReview/MyReview";
 import Footer from "./components/Footer/Footer";
 import Blog from "./components/Blog/Blog";
 import NotFound from "./components/NotFound/NotFound";
+import SingleProduct from "./components/Products/SingleProduct/SingleProduct";
+import Contact from "./components/Contact/Contact";
+import Checkout from "./components/Products/Checkout/Checkout";
 
 function App() {
   return (
@@ -22,9 +25,12 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="contact-us" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+
+        {/* Products */}
         <Route
           path="dashboard"
           element={
@@ -33,6 +39,9 @@ function App() {
             </RequireAuth>
           }
         />
+        <Route path="/product-1" element={<SingleProduct />} />
+        <Route path="/checkout" element={<Checkout />} />
+
         <Route
           path="my-review"
           element={

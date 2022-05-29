@@ -87,7 +87,7 @@ const Navbar = () => {
           </li>
           <li tabIndex="0">
             <a href="/">
-              Parent
+              Pages
               <svg
                 className="fill-current"
                 xmlns="http://www.w3.org/2000/svg"
@@ -100,10 +100,13 @@ const Navbar = () => {
             </a>
             <ul className="p-2">
               <li>
-                <a href="/">Submenu 1</a>
+                <Link to="/product-1">Single Product</Link>
               </li>
               <li>
-                <a href="/">Submenu 2</a>
+                <a href="/contact-us">Contact Us</a>
+              </li>
+              <li>
+                <a href="/checkout">Checkout</a>
               </li>
             </ul>
           </li>
