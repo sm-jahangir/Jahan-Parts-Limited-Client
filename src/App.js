@@ -14,31 +14,29 @@ import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <div className="App">
-      <div style={{ width: "90%", margin: "0 auto" }}>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route
-            path="dashboard"
-            element={
-              <RequireAuth>
-                <Products />
-              </RequireAuth>
-            }
-          />
-          <Route
-            path="my-review"
-            element={
-              <RequireAuth>
-                <MyReview />
-              </RequireAuth>
-            }
-          />
-        </Routes>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route
+          path="dashboard"
+          element={
+            <RequireAuth>
+              <Products />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="my-review"
+          element={
+            <RequireAuth>
+              <MyReview />
+            </RequireAuth>
+          }
+        />
+      </Routes>
       <Footer />
       <ToastContainer />
     </div>

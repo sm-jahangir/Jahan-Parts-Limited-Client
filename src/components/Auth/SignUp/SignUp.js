@@ -50,8 +50,8 @@ const SignUp = () => {
     navigate("/");
   };
   return (
-    <div className="flex h-screen justify-center items-center">
-      <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="flex h-screen justify-center items-center login__wrapper">
+      <div className="card w-96 bg-base-100 shadow-xl login-card">
         <div className="card-body">
           <h2 className="text-center text-2xl font-bold">Sign Up</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -165,6 +165,9 @@ const SignUp = () => {
             className="btn btn-outline"
           >
             Continue with Google
+          </button>
+          <button className="btn btn-outline btn-success">
+            Continue with Github
           </button>
         </div>
       </div>

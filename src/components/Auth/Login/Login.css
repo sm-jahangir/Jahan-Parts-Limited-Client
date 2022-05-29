@@ -1,0 +1,8 @@
+.login-card {
+    border: 2px solid #ddd;
+    padding: 10px;
+    box-shadow: 5px 10px;
+}
+.login__wrapper {
+    margin: 80px 0;
+}
