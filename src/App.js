@@ -11,6 +11,7 @@ import Products from "./components/Dashboard/Products/Products";
 import RequireAuth from "./components/Auth/RequireAuth";
 import MyReview from "./components/Dashboard/MyReview/MyReview";
 import Footer from "./components/Footer/Footer";
+import Blog from "./components/Blog/Blog";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route

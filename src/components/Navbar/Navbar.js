@@ -40,9 +40,12 @@ const Navbar = () => {
             <li>
               <Link to="/about">About</Link>
             </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
             <li tabIndex="0">
-              <a href="/" className="justify-between">
-                Parent
+              <a href="/blog" className="justify-between">
+                Blog
                 <svg
                   className="fill-current"
                   xmlns="http://www.w3.org/2000/svg"
@@ -78,6 +81,9 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/blog">Blog</Link>
           </li>
           <li tabIndex="0">
             <a href="/">
