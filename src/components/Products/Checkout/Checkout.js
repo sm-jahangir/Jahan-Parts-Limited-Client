@@ -1,11 +1,18 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
 import useProductDetail from "../../../hooks/useProductDetail";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { toast } from "react-toastify";
+import auth from "../../../firebase.init";
+import { signOut } from "firebase/auth";
 
 const Checkout = () => {
+  const [user] = useAuthState(auth);
+  const logout = () => {
+    signOut(auth);
+  };
   const { productId } = useParams();
   const [product] = useProductDetail(productId);
 
@@ -75,11 +82,15 @@ const Checkout = () => {
                     {...register("email")}
                     type="text"
                     className="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
-                    placeholder="E-mail"
+                    value={user.email}
                   />
-                  <span className="absolute text-blue-500 right-2 top-4 font-medium text-sm">
+                  <button
+                    type="button"
+                    onClick={logout}
+                    className="absolute text-blue-500 right-2 top-4 font-medium text-sm"
+                  >
                     Log out
-                  </span>
+                  </button>
                 </div>
                 <span>Shipping Address</span>
                 <div className="grid md:grid-cols-2 md:gap-2">

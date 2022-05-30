@@ -45,7 +45,14 @@ function App() {
           path="/product/:productId"
           element={<ProductDetails></ProductDetails>}
         ></Route>
-        <Route path="/checkout/:productId" element={<Checkout />} />
+        <Route
+          path="/checkout/:productId"
+          element={
+            <RequireAuth>
+              <Checkout />
+            </RequireAuth>
+          }
+        />
 
         <Route
           path="my-review"
