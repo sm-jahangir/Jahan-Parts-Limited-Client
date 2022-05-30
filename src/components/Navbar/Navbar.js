@@ -44,7 +44,7 @@ const Navbar = () => {
               <Link to="/blog">Blog</Link>
             </li>
             <li tabIndex="0">
-              <a href="/blog" className="justify-between">
+              <Link to="#" className="justify-between">
                 Blog
                 <svg
                   className="fill-current"
@@ -55,7 +55,7 @@ const Navbar = () => {
                 >
                   <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                 </svg>
-              </a>
+              </Link>
               <ul className="p-2">
                 <li>
                   <a href="/">Submenu 1</a>

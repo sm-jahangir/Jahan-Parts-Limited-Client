@@ -43,11 +43,13 @@ const Blog = () => {
                 alt="Avatar of Writer"
               />
               <div className="text-sm">
-                <p className="text-gray-900 leading-none">John Smith</p>
-                <p className="text-gray-600">Aug 18</p>
+                <p className="text-gray-900 leading-none text-xs lg:text-base">
+                  John Smith
+                </p>
+                <p className="text-gray-600 text-xs lg:text-base">Aug 18</p>
               </div>
-              <button className="btn btn-wide btn-sm ml-10">
-                Read More...
+              <button className="btn btn-sm lg:btn-wide btn-sm ml-5 lg:ml-10">
+                Read More
               </button>
             </div>
           </div>
@@ -79,11 +81,13 @@ const Blog = () => {
                 alt="Avatar of Writer"
               />
               <div className="text-sm">
-                <p className="text-gray-900 leading-none">Karen Johnson</p>
-                <p className="text-gray-600">Aug 10</p>
+                <p className="text-gray-900 leading-none text-xs lg:text-base">
+                  Karen Johnson
+                </p>
+                <p className="text-gray-600 text-xs lg:text-base">Aug 10</p>
               </div>
-              <button className="btn btn-wide btn-sm ml-10">
-                Read More...
+              <button className="btn btn-sm lg:btn-wide btn-sm ml-5 lg:ml-10">
+                Read More
               </button>
             </div>
           </div>
@@ -125,11 +129,13 @@ const Blog = () => {
                 alt="Avatar of Writer"
               />
               <div className="text-sm">
-                <p className="text-gray-900 leading-none">Rafael Martin</p>
-                <p className="text-gray-600">Aug 9</p>
+                <p className="text-gray-900 leading-none text-xs lg:text-base">
+                  Rafael Martin
+                </p>
+                <p className="text-gray-600 text-xs lg:text-base">Aug 9</p>
               </div>
-              <button className="btn btn-wide btn-sm ml-10">
-                Read More...
+              <button className="btn btn-sm lg:btn-wide btn-sm ml-5 lg:ml-10">
+                Read More
               </button>
             </div>
           </div>

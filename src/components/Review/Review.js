@@ -39,8 +39,10 @@ const Review = () => {
   };
   return (
     <div className="py-24">
-      <h2 className="text-4xl text-center mb-5">Our Customer Reviews</h2>
-      <hr className="w-1/3 mx-auto" />
+      <h2 className="lg:text-4xl text-2xl font-bold text-center mb-5">
+        Our Customer Reviews
+      </h2>
+      <hr className="lg:w-1/3 w-2/3 mx-auto" />
       <div className="mb-5"></div>
       <Slider {...settings}>
         <div className="w-full p-4 md:w-1/2">

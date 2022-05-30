@@ -5,7 +5,7 @@ const LatestBlog = () => {
     <section className="blog text-gray-700 body-font">
       <div className="container px-5 mx-auto">
         <div className="flex flex-wrap w-full mb-12 flex-col items-center text-center">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+          <h1 className="lg:text-4xl text-2xl font-bold title-font mb-2 text-gray-900">
             Recent Articles
           </h1>
         </div>

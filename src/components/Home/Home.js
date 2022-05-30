@@ -11,7 +11,7 @@ const Home = () => {
       <HomeSlider />
       <div className="home">
         {/* Banner Bottom Start */}
-        <div className="banner__bottom__wrapper flex py-10 justify-between">
+        <div className="banner__bottom__wrapper grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4 py-10">
           <div className="flex">
             <span className="text-4xl">
               <i className="fa-solid fa-truck-fast text-indigo-500"></i>
@@ -60,7 +60,7 @@ const Home = () => {
         {/* Banner Bottom END */}
         {/* Category By Banner Start */}
         <div className="category__by__banner">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4">
             <div
               className=""
               style={{
@@ -124,28 +124,28 @@ const Home = () => {
           <div className="header__title">
             <div className="flex justify-between">
               <div className="flex items-center gap-5">
-                <h3 className="text-3xl font-bold">Best Sellers</h3>
-                <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+                <h3 className="text-xl lg:text-3xl font-bold">Best Sellers</h3>
+                <div className="lg:grid grid-flow-col lg:gap-5 gap-1 text-center auto-cols-max hidden">
                   <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                    <span className="countdown font-mono text-2xl">
+                    <span className="countdown font-mono lg:text-2xl">
                       <span style={{ "--value": "15" }}></span>
                     </span>
                     days
                   </div>
                   <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                    <span className="countdown font-mono text-2xl">
+                    <span className="countdown font-mono lg:text-2xl">
                       <span style={{ "--value": "15" }}></span>
                     </span>
                     hours
                   </div>
                   <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                    <span className="countdown font-mono text-2xl">
+                    <span className="countdown font-mono lg:text-2xl">
                       <span style={{ "--value": "15" }}></span>
                     </span>
                     min
                   </div>
                   <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                    <span className="countdown font-mono text-2xl">
+                    <span className="countdown font-mono lg:text-2xl">
                       <span style={{ "--value": "15" }}></span>
                     </span>
                     sec
@@ -235,7 +235,7 @@ const Home = () => {
         <div
           style={{ backgroundColor: "rgba(0, 0, 0, 0)", marginTop: "100px" }}
         >
-          <h1 className="text-center text-5xl font-bold pb-5">
+          <h1 className="text-center lg:text-5xl text-2xl font-bold pb-5">
             Our Experts Team
           </h1>
           <hr className="w-2/4 m-auto" />
@@ -253,7 +253,7 @@ const Home = () => {
                     style={{ cursor: "auto", width: "500px", height: "250px" }}
                   />
                   <div className="pt-6 text-center">
-                    <h1 className="text-gray-900 text-xl font-serif font-bold leading-normal mt-0 mb-2">
+                    <h1 className="text-gray-900 lg:text-xl text-lg font-serif font-bold leading-normal mt-0 mb-2">
                       John Doe
                     </h1>
                     <p className="text-blue-gray-700 text-base font-light leading-relaxed mt-0 mb-4">
@@ -285,7 +285,7 @@ const Home = () => {
                     style={{ cursor: "auto", width: "500px", height: "250px" }}
                   />
                   <div className="pt-6 text-center">
-                    <h1 className="text-gray-900 text-xl font-serif font-bold leading-normal mt-0 mb-2">
+                    <h1 className="text-gray-900 lg:text-xl text-lg font-serif font-bold leading-normal mt-0 mb-2">
                       Jack Wales
                     </h1>
                     <p className="text-blue-gray-700 text-base font-light leading-relaxed mt-0 mb-4">
@@ -317,7 +317,7 @@ const Home = () => {
                     style={{ cursor: "auto", width: "500px", height: "250px" }}
                   />
                   <div className="pt-6 text-center">
-                    <h1 className="text-gray-900 text-xl font-serif font-bold leading-normal mt-0 mb-2">
+                    <h1 className="text-gray-900 lg:text-xl text-lg font-serif font-bold leading-normal mt-0 mb-2">
                       George Hoyt
                     </h1>
                     <p className="text-blue-gray-700 text-base font-light leading-relaxed mt-0 mb-4">
@@ -346,7 +346,7 @@ const Home = () => {
                     style={{ cursor: "auto", width: "500px", height: "250px" }}
                   />
                   <div className="pt-6 text-center">
-                    <h1 className="text-gray-900 text-xl font-serif font-bold leading-normal mt-0 mb-2">
+                    <h1 className="text-gray-900 lg:text-xl text-lg font-serif font-bold leading-normal mt-0 mb-2">
                       Isabella Bolt
                     </h1>
                     <p className="text-blue-gray-700 text-base font-light leading-relaxed mt-0 mb-4">
