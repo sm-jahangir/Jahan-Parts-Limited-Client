@@ -16,6 +16,7 @@ import NotFound from "./components/NotFound/NotFound";
 import ProductDetails from "./components/Products/ProductDetails/ProductDetails";
 import Contact from "./components/Contact/Contact";
 import Checkout from "./components/Products/Checkout/Checkout";
+import Portfolio from "./components/Portfolio/Portfolio";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/portfolio" element={<Portfolio />} />
 
         {/* Products */}
         <Route
