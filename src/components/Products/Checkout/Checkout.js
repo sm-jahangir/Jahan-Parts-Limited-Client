@@ -1,6 +1,10 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import useProductDetail from "../../../hooks/useProductDetail";
 
 const Checkout = () => {
+  const { productId } = useParams();
+  const [product] = useProductDetail(productId);
   return (
     <div>
       <div className="py-12">
@@ -18,6 +22,26 @@ const Checkout = () => {
                 <small className="text-gray-400 ml-1">-</small>
                 <span className="text-gray-400 ml-1">Payment</span>
               </div>
+              <span>Product Info</span>
+              <div className="relative">
+                <input
+                  type="text"
+                  name="productName"
+                  className="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
+                  value={product?.name}
+                  readOnly
+                  disabled
+                />
+              </div>
+              <div className="relative pb-5">
+                <input
+                  type="number"
+                  name="quantity"
+                  className="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
+                  placeholder="Product Quantity min 5 max 55"
+                />
+              </div>
+
               <span>Customer Information</span>
               <div className="relative pb-5">
                 <input

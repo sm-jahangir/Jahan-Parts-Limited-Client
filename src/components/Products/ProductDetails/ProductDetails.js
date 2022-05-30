@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
+import useProductDetail from "../../../hooks/useProductDetail";
 
 const ProductDetails = () => {
   const { productId } = useParams();
-  const [product, setProduct] = useState({});
-
-  useEffect(() => {
-    const url = `http://localhost:5000/product/${productId}`;
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => setProduct(data));
-  }, []);
-
+  const [product] = useProductDetail(productId);
   return (
     <div className="py-6">
       {/* <!-- Breadcrumbs --> */}
@@ -111,16 +104,9 @@ const ProductDetails = () => {
             <p className="text-gray-500">{product.description}</p>
 
             <div className="flex py-4 space-x-4 justify-start items-center">
-              <input
-                type="number"
-                min="10"
-                max={500}
-                placeholder="Enter min 10 maxium 500"
-                className="input input-bordered w-full max-w-xs"
-              />
               <Link
-                to="/checkout"
-                className="h-14 px-6 py-2 font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white"
+                to={`/checkout/${productId}`}
+                className="px-10 py-4 font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white"
               >
                 Buy Now
               </Link>

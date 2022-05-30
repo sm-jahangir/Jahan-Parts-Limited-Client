@@ -45,7 +45,7 @@ function App() {
           path="/product/:productId"
           element={<ProductDetails></ProductDetails>}
         ></Route>
-        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/checkout/:productId" element={<Checkout />} />
 
         <Route
           path="my-review"
