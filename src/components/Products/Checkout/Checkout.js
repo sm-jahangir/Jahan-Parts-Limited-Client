@@ -96,12 +96,9 @@ const Checkout = () => {
                 placeholder="Phone Number*"
               />
               <div className="flex justify-between items-center pt-2">
-                <button
-                  type="button"
-                  className="h-12 w-24 text-blue-500 text-xs font-medium"
-                >
-                  Return to cart
-                </button>
+                <a href="/" className="text-blue-500 text-xs font-medium">
+                  Return to Shopping
+                </a>
                 <button
                   type="button"
                   className="h-12 w-48 rounded font-medium text-xs bg-blue-500 text-white"

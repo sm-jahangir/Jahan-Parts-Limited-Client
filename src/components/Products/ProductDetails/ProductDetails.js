@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
-const SingleProduct = () => {
+const ProductDetails = () => {
+  const { productId } = useParams();
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    const url = `http://localhost:5000/product/${productId}`;
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => setProduct(data));
+  }, []);
+
   return (
     <div className="py-6">
       {/* <!-- Breadcrumbs --> */}
@@ -25,8 +36,8 @@ const SingleProduct = () => {
               />
             </svg>
           </span>
-          <a href="/" className="hover:text-gray-600 hover:underline">
-            Electronics
+          <a href="/products" className="hover:text-gray-600 hover:underline">
+            {product.category}
           </a>
           <span>
             <svg
@@ -44,7 +55,7 @@ const SingleProduct = () => {
               />
             </svg>
           </span>
-          <span>Headphones</span>
+          <span>{product.name}</span>
         </div>
       </div>
       {/* <!-- ./ Breadcrumbs --> */}
@@ -52,11 +63,11 @@ const SingleProduct = () => {
       <div className="mx-auto mt-6 max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="-mx-4 flex flex-col md:flex-row">
           <div className="px-4 md:flex-1">
-            <img src="https://via.placeholder.com/600x600" alt="hello" />
+            <img src={"/products/" + product.img} alt="hello" />
           </div>
           <div className="px-4 md:flex-1">
             <h2 className="mb-2 text-2xl font-bold leading-tight tracking-tight text-gray-800 md:text-3xl">
-              Lorem ipsum dolor, sit amet consectetur, adipisicing elit.
+              {product.name}
             </h2>
             <p className="text-sm text-gray-500">
               By{" "}
@@ -71,7 +82,7 @@ const SingleProduct = () => {
                   <div className="flex rounded-lg bg-gray-100 py-2 px-3">
                     <span className="mr-1 mt-1 text-indigo-400">$</span>
                     <span className="text-3xl font-bold text-indigo-600">
-                      25
+                      {product.price}
                     </span>
                   </div>
                 </div>
@@ -97,36 +108,33 @@ const SingleProduct = () => {
               </div>
             </div>
 
-            <p className="text-gray-500">
-              Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Vitae
-              exercitationem porro saepe ea harum corrupti vero id laudantium
-              enim, libero blanditiis expedita cupiditate a est.
-            </p>
+            <p className="text-gray-500">{product.description}</p>
 
             <div className="flex py-4 space-x-4 justify-start items-center">
               <input
                 type="number"
-                min={5}
-                max={50}
+                min="10"
+                max={500}
+                placeholder="Enter min 10 maxium 500"
                 className="input input-bordered w-full max-w-xs"
               />
-              <button
-                type="button"
+              <Link
+                to="/checkout"
                 className="h-14 px-6 py-2 font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white"
               >
                 Buy Now
-              </button>
+              </Link>
             </div>
             <div className="custom__according">
               <div className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-2">
                 <input type="checkbox" className="peer" />
                 <div className="collapse-title text-xl font-medium">
-                  Our Order One
+                  Most popular product in the world
                 </div>
                 <div className="collapse-content">
                   <p>
-                    tabindex="0" attribute is necessary to make the div
-                    focusable
+                    What is the most sold item in the world? The most sold item
+                    in the world is clothing and fashion items.
                   </p>
                 </div>
               </div>
@@ -134,24 +142,29 @@ const SingleProduct = () => {
               <div className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-2">
                 <input type="checkbox" className="peer" />
                 <div className="collapse-title text-xl font-medium">
-                  Our Order One
+                  What items sell the most?
                 </div>
                 <div className="collapse-content">
                   <p>
-                    tabindex="1" attribute is necessary to make the div
-                    focusable
+                    Fashion items. Interestingly, fashion is the top selling
+                    industry in almost all of the world. Yes, despite the
+                    industry being tricky and having products that come in sizes
+                    that may vary from store to store, fashion remains the queen
+                    of sales.
                   </p>
                 </div>
               </div>
               <div className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-2">
                 <input type="checkbox" className="peer" />
                 <div className="collapse-title text-xl font-medium">
-                  Our Order One
+                  What is a successful product?
                 </div>
                 <div className="collapse-content">
                   <p>
-                    tabindex="0" attribute is necessary to make the div
-                    focusable
+                    What is a successful product? Image result A successful
+                    product is a product that exists in the market for a long
+                    time. That is possible if the product adds value to the
+                    user.
                   </p>
                 </div>
               </div>
@@ -163,4 +176,4 @@ const SingleProduct = () => {
   );
 };
 
-export default SingleProduct;
+export default ProductDetails;

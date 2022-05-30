@@ -13,7 +13,7 @@ import MyReview from "./components/Dashboard/MyReview/MyReview";
 import Footer from "./components/Footer/Footer";
 import Blog from "./components/Blog/Blog";
 import NotFound from "./components/NotFound/NotFound";
-import SingleProduct from "./components/Products/SingleProduct/SingleProduct";
+import ProductDetails from "./components/Products/ProductDetails/ProductDetails";
 import Contact from "./components/Contact/Contact";
 import Checkout from "./components/Products/Checkout/Checkout";
 
@@ -39,7 +39,12 @@ function App() {
             </RequireAuth>
           }
         />
-        <Route path="/product-1" element={<SingleProduct />} />
+        {/* <Route path="/product-1" element={<ProductDetails />} /> */}
+
+        <Route
+          path="/product/:productId"
+          element={<ProductDetails></ProductDetails>}
+        ></Route>
         <Route path="/checkout" element={<Checkout />} />
 
         <Route

@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   async function getProducts() {
     try {
-      const response = await axios.get("products.json");
+      const response = await axios.get("http://localhost:5000/products");
       setProducts(response.data);
     } catch (error) {
       console.error(error);
     }
   }
   getProducts();
+  const navigate = useNavigate();
+  const navigateToProductDetail = (id) => {
+    navigate(`/product/${id}`);
+  };
+
   return (
     <div className="container mx-auto my-12">
       <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-6">
@@ -80,12 +86,12 @@ const Products = () => {
                   <span className="lg:text-3xl text-xl font-bold text-gray-900 dark:text-white">
                     ${product.price}
                   </span>
-                  <a
-                    href="/"
+                  <button
+                    onClick={() => navigateToProductDetail(product._id)}
                     className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-sm lg:font-medium rounded-lg text-sm px-5 lg:py-2.5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   >
                     Buy Now
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
