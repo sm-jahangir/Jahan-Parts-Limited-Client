@@ -4,6 +4,7 @@ import auth from "../../../firebase.init";
 import { format } from "date-fns";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import ReviewList from "./ReviewList/ReviewList";
 
 const MyReview = () => {
   const [user] = useAuthState(auth);
@@ -11,13 +12,20 @@ const MyReview = () => {
 
   const { register, handleSubmit, watch } = useForm();
   const onSubmit = (data) => {
-    axios
-      .post("http://localhost:5000/review", { data })
-      .then(function (response) {
-        console.log(response.data);
+    const url = "http://localhost:5000/review";
+    fetch(url, {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
       })
-      .catch(function (error) {
-        console.log(error);
+      .catch((error) => {
+        console.error("Error:", error);
       });
   };
 
@@ -127,6 +135,8 @@ const MyReview = () => {
           />
         </div>
       </form>
+      <div className="mt-32"></div>
+      <ReviewList />
     </div>
   );
 };
