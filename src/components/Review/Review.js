@@ -7,7 +7,9 @@ const Review = () => {
   const [reviews, setReviews] = useState([]);
   async function getReviews() {
     try {
-      const response = await axios.get("http://localhost:5000/all-review");
+      const response = await axios.get(
+        "https://still-shore-53183.herokuapp.com/all-review"
+      );
       setReviews(response.data);
     } catch (error) {
       console.error(error);

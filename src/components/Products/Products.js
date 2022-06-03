@@ -6,7 +6,9 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   async function getProducts() {
     try {
-      const response = await axios.get("http://localhost:5000/products");
+      const response = await axios.get(
+        "https://still-shore-53183.herokuapp.com/products"
+      );
       setProducts(response.data);
     } catch (error) {
       console.error(error);

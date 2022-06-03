@@ -10,7 +10,7 @@ const Orders = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/orders`, {
+      fetch(`https://still-shore-53183.herokuapp.com/orders`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,

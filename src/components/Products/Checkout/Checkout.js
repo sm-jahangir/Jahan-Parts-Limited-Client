@@ -24,7 +24,7 @@ const Checkout = () => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post("http://localhost:5000/order", data)
+      .post("https://still-shore-53183.herokuapp.com/order", data)
       .then(function (response) {
         console.log(response);
         const { data } = response;
