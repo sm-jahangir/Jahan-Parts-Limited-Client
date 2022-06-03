@@ -17,6 +17,8 @@ import ProductDetails from "./components/Products/ProductDetails/ProductDetails"
 import Contact from "./components/Contact/Contact";
 import Checkout from "./components/Products/Checkout/Checkout";
 import Portfolio from "./components/Portfolio/Portfolio";
+import Dashboard from "./components/Dashboard/Dashboard";
+import DashboardHome from "./components/Dashboard/Home/DashboardHome";
 
 function App() {
   return (
@@ -32,9 +34,23 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/portfolio" element={<Portfolio />} />
 
-        {/* Products */}
+        {/* Dashboard */}
+
         <Route
           path="dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          }
+        >
+          <Route index element={<DashboardHome></DashboardHome>}></Route>
+          <Route path="review" element={<MyReview></MyReview>}></Route>
+        </Route>
+
+        {/* Products */}
+        <Route
+          path="products"
           element={
             <RequireAuth>
               <Products />
