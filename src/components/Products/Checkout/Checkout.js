@@ -16,7 +16,11 @@ const Checkout = () => {
   const { productId } = useParams();
   const [product] = useProductDetail(productId);
 
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
   const onSubmit = (data) => {
     console.log(data);
     axios
@@ -57,7 +61,7 @@ const Checkout = () => {
                 <div className="relative">
                   <input
                     type="text"
-                    {...register("productName")}
+                    {...register("name")}
                     className="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
                     value={product.name}
                   />
@@ -69,11 +73,20 @@ const Checkout = () => {
                 </div>
                 <div className="relative pb-5">
                   <input
-                    {...register("quantity", { min: 18, max: 99 })}
+                    {...register("quantity", {
+                      required: true,
+                      min: 5,
+                      max: 500,
+                    })}
                     type="number"
                     className="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
-                    placeholder="Product Quantity min 5 max 55"
+                    placeholder="Product Quantity min 5 max 500"
                   />
+                  <p>{errors.quantity?.message}</p>
+                  <p style={{ color: "red", fontSize: "12px" }}>
+                    {errors.quantity?.type === "required" &&
+                      "Product Quantity min 6 max 499"}
+                  </p>
                 </div>
 
                 <span>Customer Information</span>
