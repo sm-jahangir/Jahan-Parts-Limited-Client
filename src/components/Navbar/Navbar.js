@@ -134,15 +134,7 @@ const Navbar = () => {
               <li>
                 <Link to="/dashboard">Dashboard</Link>
               </li>
-              <li>
-                <a href="/" className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a href="/">Settings</a>
-              </li>
+
               <li>
                 <button onClick={logout}>Logout</button>
               </li>

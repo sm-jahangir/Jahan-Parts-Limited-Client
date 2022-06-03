@@ -4,10 +4,13 @@ import auth from "../../../firebase.init";
 import { format } from "date-fns";
 import { useForm } from "react-hook-form";
 import ReviewList from "./ReviewList/ReviewList";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const MyReview = () => {
   const [user] = useAuthState(auth);
   const date = format(new Date(), "PP");
+  const navigate = useNavigate();
 
   const { register, handleSubmit, watch } = useForm();
   const onSubmit = (data) => {
@@ -22,6 +25,8 @@ const MyReview = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
+        toast("Review Added successfully Placed");
+        navigate("/");
       })
       .catch((error) => {
         console.error("Error:", error);
