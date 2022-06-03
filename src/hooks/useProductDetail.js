@@ -4,7 +4,7 @@ const useProductDetail = (productId) => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    const url = `https://still-shore-53183.herokuapp.com/product/${productId}`;
+    const url = `http://localhost:5000/product/${productId}`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => setProduct(data));

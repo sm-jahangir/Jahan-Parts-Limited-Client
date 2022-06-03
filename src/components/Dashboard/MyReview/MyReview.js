@@ -9,12 +9,7 @@ const MyReview = () => {
   const [user] = useAuthState(auth);
   const date = format(new Date(), "PP");
 
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit, watch } = useForm();
   const onSubmit = (data) => {
     axios
       .post("http://localhost:5000/review", { data })
