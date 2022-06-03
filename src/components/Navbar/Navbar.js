@@ -72,7 +72,7 @@ const Navbar = () => {
           </ul>
         </div>
         <a href="/" className="btn btn-ghost normal-case text-xl">
-          JahanGroup
+          <img src="logo.png" width={65} alt="this is logo" />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -122,7 +122,7 @@ const Navbar = () => {
             <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 <img
-                  src="https://api.lorem.space/image/face?hash=33791"
+                  src="https://i.ibb.co/RBL9twK/jahangir.jpg"
                   alt="profile"
                 />
               </div>
