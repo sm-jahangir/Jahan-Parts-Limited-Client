@@ -6,7 +6,7 @@ const Dashboard = () => {
     <div>
       <div className="drawer drawer-mobile pl-5 lg:pl-0">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-start justify-start">
+        <div className="drawer-content flex flex-col items-start justify-start pl-3">
           {/* <!-- Page content here --> */}
           <label
             htmlFor="my-drawer-2"
