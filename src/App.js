@@ -19,6 +19,7 @@ import Checkout from "./components/Products/Checkout/Checkout";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Dashboard from "./components/Dashboard/Dashboard";
 import DashboardHome from "./components/Dashboard/Home/DashboardHome";
+import Users from "./components/Dashboard/Users/User";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         >
           <Route index element={<DashboardHome></DashboardHome>}></Route>
           <Route path="review" element={<MyReview></MyReview>}></Route>
+          <Route path="users" element={<Users></Users>}></Route>
         </Route>
 
         {/* Products */}

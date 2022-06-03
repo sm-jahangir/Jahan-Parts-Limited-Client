@@ -1,10 +1,13 @@
+import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../../firebase.init";
+import { useNavigate } from "react-router-dom";
 
 const ReviewList = () => {
   const [reviews, setReviews] = useState([]);
   const [user] = useAuthState(auth);
+  const navigate = useNavigate();
   useEffect(() => {
     if (user) {
       fetch(`http://localhost:5000/review?email=${user.email}`, {
@@ -16,6 +19,9 @@ const ReviewList = () => {
         .then((res) => {
           console.log("res", res);
           if (res.status === 401 || res.status === 403) {
+            signOut(auth);
+            localStorage.removeItem("accessToken");
+            navigate("/");
           }
           return res.json();
         })

@@ -3,7 +3,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { format } from "date-fns";
 import { useForm } from "react-hook-form";
-import axios from "axios";
 import ReviewList from "./ReviewList/ReviewList";
 
 const MyReview = () => {
