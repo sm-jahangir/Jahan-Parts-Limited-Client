@@ -55,6 +55,27 @@ const SignUp = () => {
       <div className="card w-96 bg-base-100 shadow-xl login-card">
         <div className="card-body">
           <h2 className="text-center text-2xl font-bold">Sign Up</h2>
+
+          <div className="overflow-x-auto">
+            <table className="table w-full">
+              <thead>
+                <tr>
+                  <th>Email:</th>
+                  <th>Password</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>example@admin.com</td>
+                  <td>123456</td>
+                </tr>
+                <tr>
+                  <td>example@user.com</td>
+                  <td>123456</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-control w-full max-w-xs">
               <label className="label">
